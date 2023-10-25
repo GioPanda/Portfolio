@@ -1,0 +1,11 @@
+.title {
+    font-size: 5.5rem;
+    font-weight: 600;
+    color: #b9dcd3;
+    margin-top: 2rem;
+    
+}
+
+span {
+    font-family: var(--font-mono);
+}

@@ -1,0 +1,16 @@
+#root {
+    max-width: 100%;
+    margin: 0 auto;
+    
+
+  }
+  
+.AppContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    height: 100vh;
+    margin: 0 auto;
+    color: aqua;
+    background-color: rgba(22, 193, 212, 0.2);
+}
