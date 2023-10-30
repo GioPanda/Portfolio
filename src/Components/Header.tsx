@@ -1,16 +1,14 @@
 import styles from "./Styles/Header.module.css";
-import Logo from "../assets/circle-heat-svgrepo-com.svg?react";
 
 const Header = () => {
   return (
     <>
       <header className={styles.header}>
         <nav className={styles.navbar}>
-          <div className={styles.logo}>
-            <Logo />
-          </div>
-
           <div className={styles.list}>
+            <div className={styles.headerName}>
+              <h1>{"<Giovanna />"}</h1>
+            </div>
             <ol>
               <li>
                 <a href="/">Sobre</a>
@@ -24,9 +22,13 @@ const Header = () => {
               <li>
                 <a href="/">Contato</a>
               </li>
+              <li>
+                <a href="" className={styles.CvDownloader}>
+                  Baixar Currículo
+                </a>
+              </li>
             </ol>
           </div>
-          <button className={styles.button}>Currículo</button>
         </nav>
       </header>
     </>

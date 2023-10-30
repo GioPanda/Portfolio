@@ -1,11 +1,37 @@
-.title {
-    font-size: 5.5rem;
-    font-weight: 600;
-    color: #b9dcd3;
-    margin-top: 2rem;
-    
+.container {
+    height: 100vh;
+    margin-right: auto;
+    margin-left:  auto;
+    margin-top: 8rem;
+    text-align: center;
+    font-family: var(--font-mono);
 }
 
-span {
-    font-family: var(--font-mono);
+.title {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--font-outfit);
+    margin-bottom: 0;
+  --tw-text-opacity: 1;
+    color: rgb(50, 50, 50);
+    font-size: 6rem;
+    font-weight: bold;
+
+}
+
+.selectedText {
+
+    background: var(--linear-main-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
 }

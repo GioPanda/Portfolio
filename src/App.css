@@ -4,13 +4,22 @@
     
 
   }
-  
-.AppContainer {
-    display: flex;
-    flex-direction: column;
-    max-width: 80vw;
-    height: 100vh;
-    margin: 0 auto;
-    color: aqua;
-    background-color: rgba(22, 193, 212, 0.2);
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 2rem;
 }
+
+.newSection {
+  margin-top: 5rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: calc(100% - 2rem);
+  margin-left: 2rem;
+ 
+}
+
