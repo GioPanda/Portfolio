@@ -8,6 +8,9 @@
 
   text-align: center;
   font-family: var(--font-mono);
+
+  border-radius: 10px;
+  /* background: linear-gradient(to top left, #e4e6ff, #fbb9b9 40%, #e4ebff); */
 }
 
 .containerPresentation > .wrapper {
@@ -244,5 +247,20 @@ p {
   }
   .title {
     font-size: 4.64rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .title {
+    font-size: 2rem;
+  }
+  .containerPresentation p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .containerPresentation p {
+    font-size: 0.9rem;
   }
 }

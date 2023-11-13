@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "./Styles/Header.module.css";
 import mobileStyles from "./Styles/HeaderMobile.module.css";
-
 import ContactIcon from "../assets/contact-icon.svg?react";
 
 export interface isMobileInterface {

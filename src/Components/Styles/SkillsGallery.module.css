@@ -3,15 +3,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 15px;
-}
-
-.containerSkills > div {
-  display: flex;
-  gap: 12vw;
+  border-radius: 10px;
+  /* background: rgba(0, 151, 19, 0.2); */
+  /* 
+  background: linear-gradient(to top left, #e4e6ff, #ecefef 40%, #e4ebff); */
 
   width: 100%;
-  height: 40%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  margin-top: 10rem;
 }
 
 .containerSkills::before {
@@ -19,6 +20,13 @@
   height: 1px;
   width: 20%;
   background: rgb(116, 196, 220);
+}
+
+.containerSkills > div {
+  display: flex;
+  gap: 10vw;
+  width: 100%;
+  height: 40%;
 }
 
 .containerSkills > .firstDiv {
@@ -37,4 +45,49 @@
   margin-bottom: 2rem;
   font-size: 2rem;
   font-family: var(--font-outfit);
+}
+
+@media screen and (max-width: 900px) {
+  .containerSkills {
+    height: 100%;
+  }
+
+  .containerSkills > div {
+    width: 90%;
+
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 728px) {
+  .containerSkills > div {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .containerSkills {
+    padding-top: 4rem;
+
+    margin-top: 17rem;
+    background-color: steelblue;
+  }
+
+  .containerSkills > div {
+    display: flex;
+    width: 100%;
+
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 190px) {
+  .containerSkills {
+    padding-top: 4rem;
+    background-color: greenyellow;
+    margin-top: 10rem;
+  }
+  .containerSkills > .title {
+    font-size: 1.5rem;
+  }
 }

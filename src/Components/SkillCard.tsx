@@ -16,7 +16,7 @@ const defaultOptions = {
 };
 
 interface SkillCardProps {
-  skill: string | React.ReactNode | React.FunctionComponent;
+  skill: React.ReactNode;
   skillName: string;
 }
 
@@ -24,8 +24,12 @@ const SkillCard = ({ skill, skillName }: SkillCardProps) => {
   return (
     <>
       <div className={`${styles.container}`}>
-        <Tilt options={defaultOptions}>
-          {skill}
+        <Tilt
+          options={defaultOptions}
+          onMouseEnter={() => console.log("enter")}
+          className={`${styles.skillCard}`}
+        >
+          <div>{skill}</div>
           <Tilt options={defaultOptions}>
             <h2>{skillName}</h2>
           </Tilt>

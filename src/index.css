@@ -12,6 +12,8 @@
     #4ddfbd,
     #195440
   );
+  color-scheme: only light;
+
   --font-outfit: "Outfit", sans-serif;
 }
 
@@ -22,10 +24,15 @@ body {
   scroll-behavior: smooth;
   scroll-padding-top: auto;
   max-width: 2040px;
-  scrollbar-width: none; /* "auto" or "thin" */
-  scrollbar-color: #64ffda rgba(87, 244, 255, 0.1);
-  background: linear-gradient(to bottom right, #e4e6ff, #fff 40%, #e4ebff);
-  box-sizing: border-box;
+  scrollbar-width: auto; /* "auto" or "thin" */
+
+  scrollbar-color: rgb(48, 36, 49) rgba(87, 244, 255, 0.1);
+  background: linear-gradient(
+    to bottom right,
+    rgba(211, 240, 247, 0.15),
+    rgba(226, 231, 231, 0.2) 40%,
+    rgb(206, 244, 244, 0.4)
+  );
 }
 
 body::-webkit-scrollbar {

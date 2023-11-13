@@ -173,3 +173,9 @@ a {
     height: 1.4rem;
   }
 }
+
+@media screen and (max-width: 275px) {
+  .headerNameOpen > a > h1 {
+    font-size: 1rem;
+  }
+}

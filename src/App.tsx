@@ -27,10 +27,6 @@ function App() {
           <OtherPage />
 
           <SkillsGallery />
-
-          <div>
-            <p>dasdasd</p>
-          </div>
         </div>
       </div>
     </>

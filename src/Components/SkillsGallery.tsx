@@ -17,6 +17,7 @@ const SkillsGallery = () => {
         <h1 className={styles.title}>Habilidades</h1>
         <div className={styles.firstDiv}>
           <SkillCard skill={<ReactImg />} skillName="React" />
+
           <SkillCard skill={<JsImg />} skillName="JavaScript" />
           <SkillCard skill={<TsImg />} skillName="TypeScript" />
 
