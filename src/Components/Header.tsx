@@ -1,36 +1,110 @@
+import { useState } from "react";
 import styles from "./Styles/Header.module.css";
+import mobileStyles from "./Styles/HeaderMobile.module.css";
 
-const Header = () => {
+import ContactIcon from "../assets/contact-icon.svg?react";
+
+export interface isMobileInterface {
+  isOpen: boolean;
+}
+
+const Header = ({ isOpen }: isMobileInterface) => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const toggleMobileMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
-      <header className={styles.header}>
-        <nav className={styles.navbar}>
-          <div className={styles.list}>
-            <div className={styles.headerName}>
-              <h1>{"<Giovanna />"}</h1>
-            </div>
-            <ol>
-              <li>
-                <a href="/">Sobre</a>
-              </li>
-              <li>
-                <a href="/">Habilidades</a>
-              </li>
-              <li>
-                <a href="/">Projetos</a>
-              </li>
-              <li>
-                <a href="/">Contato</a>
-              </li>
-              <li>
-                <a href="" className={styles.CvDownloader}>
-                  Baixar Currículo
-                </a>
-              </li>
-            </ol>
+      {isOpen ? (
+        <div className={mobileStyles.header}>
+          <div
+            className={mobileStyles.humburguerIcon}
+            onClick={toggleMobileMenu}
+          >
+            <div className={mobileStyles.bar1}></div>
+            <div className={mobileStyles.bar2}></div>
+            <div className={mobileStyles.bar3}></div>
+
+            {isMenuOpen && (
+              <ul
+                className={` ${
+                  isMenuOpen ? mobileStyles.open : mobileStyles.close
+                }`}
+              >
+                <span>Navegue</span>
+
+                <li>
+                  <a href="#About">Sobre</a>
+                </li>
+                <li>
+                  <a href="#Skills">Habilidades</a>
+                </li>
+                <li>
+                  <a href="/">Projetos</a>
+                </li>
+                <li>
+                  <a href="/">Contato</a>
+                </li>
+                <li>
+                  <a href="">Baixar Currículo</a>
+                </li>
+              </ul>
+            )}
           </div>
-        </nav>
-      </header>
+
+          {isMenuOpen ? (
+            ""
+          ) : (
+            <div className={mobileStyles.headerNameOpen}>
+              <a href="/">
+                {" "}
+                <h1>{"<Giovanna />"}</h1>
+              </a>
+            </div>
+          )}
+          {isMenuOpen ? (
+            ""
+          ) : (
+            <div className={mobileStyles.contactIcon}>
+              <a href="#Contact">
+                <ContactIcon />
+              </a>
+            </div>
+          )}
+        </div>
+      ) : (
+        <header className={styles.header}>
+          <nav className={styles.navbar}>
+            <div className={styles.list}>
+              <div className={styles.headerName}>
+                <h1>{"<Giovanna />"}</h1>
+              </div>
+
+              <ol>
+                <li>
+                  <a href="#About">Sobre</a>
+                </li>
+                <li>
+                  <a href="#Skills">Habilidades</a>
+                </li>
+                <li>
+                  <a href="/">Projetos</a>
+                </li>
+                <li>
+                  <a href="/">Contato</a>
+                </li>
+                <li>
+                  <a href="" className={styles.CvDownloader}>
+                    Baixar Currículo
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </nav>
+        </header>
+      )}
     </>
   );
 };

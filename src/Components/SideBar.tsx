@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Styles/SideBar.module.css";
 import GithubIcon from "../assets/git-icon.svg?react";
 import LinkedinIncon from "../assets/linkedin-icon.svg?react";
@@ -10,7 +9,7 @@ const SideBar = () => {
       <div className={`${styles.list} sidebar`}>
         <ul>
           <li>
-            <a href="https://github.com/giovannasantos" target="_blank">
+            <a href="https://github.com/GioPanda" target="_blank">
               <GithubIcon />
             </a>
           </li>
