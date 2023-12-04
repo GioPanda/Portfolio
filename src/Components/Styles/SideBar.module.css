@@ -6,7 +6,7 @@
 }
 
 .list > ul {
-  margin-top: 15vh;
+  margin-top: 5vh;
   list-style: none;
   display: flex;
   flex-direction: column;

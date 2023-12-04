@@ -8,6 +8,7 @@ import SideBar from "./Components/SideBar";
 import SkillsGallery from "./Components/SkillsGallery";
 import ProjectsGallery from "./Components/ProjectsGallery";
 import ContactsLinks from "./Components/ContactsLinks";
+import Footer from "./Components/Footer";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -39,6 +40,7 @@ function App() {
           <SkillsGallery />
           <ProjectsGallery />
           <ContactsLinks />
+          <Footer />
         </div>
       </div>
     </>

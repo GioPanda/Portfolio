@@ -47,10 +47,10 @@ const Header = ({ isOpen }: isMobileInterface) => {
                   <a href="#Skills">Habilidades</a>
                 </li>
                 <li>
-                  <a href="/#Projetos">Projetos</a>
+                  <a href="#Projects">Projetos</a>
                 </li>
                 <li>
-                  <a href="/#Contact">Contato</a>
+                  <a href="#Contact">Contato</a>
                 </li>
                 <li>
                   <a href="">Baixar Currículo</a>
@@ -95,10 +95,10 @@ const Header = ({ isOpen }: isMobileInterface) => {
                   <a href="#Skills">Habilidades</a>
                 </li>
                 <li>
-                  <a href="/#Projetos">Projetos</a>
+                  <a href="#Projects">Projetos</a>
                 </li>
                 <li>
-                  <a href="/#Contact">Contato</a>
+                  <a href="#Contact">Contato</a>
                 </li>
                 <li>
                   <a href="" className={styles.CvDownloader}>
