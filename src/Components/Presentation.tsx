@@ -1,6 +1,6 @@
 import styles from "./Styles/Presentation.module.css";
 import GithubIcon from "../assets/git-presentation.svg?react";
-import LinkedinIncon from "../assets/linkedin-presentation.svg?react";
+import LinkedinIcon from "../assets/linkedin-presentation.svg?react";
 import { isMobileInterface } from "./Header";
 
 const Presentation = ({ isOpen }: isMobileInterface) => {
@@ -35,7 +35,7 @@ const Presentation = ({ isOpen }: isMobileInterface) => {
               className={styles.linkedin}
             >
               <span>
-                <LinkedinIncon />
+                <LinkedinIcon />
               </span>
               <strong>Linkedin</strong>
             </a>

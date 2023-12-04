@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+
   /* background: rgba(0, 151, 19, 0.2); */
   /* 
   background: linear-gradient(to top left, #e4e6ff, #ecefef 40%, #e4ebff); */
@@ -12,14 +12,13 @@
   height: 100%;
   max-height: 100%;
   max-width: 100%;
-  margin-top: 10rem;
 }
 
 .containerSkills::before {
   content: "";
   height: 1px;
   width: 20%;
-  background: rgb(116, 196, 220);
+  background: rgba(116, 196, 220, 0.4);
 }
 
 .containerSkills > div {
@@ -49,7 +48,9 @@
 
 @media screen and (max-width: 900px) {
   .containerSkills {
-    height: 100%;
+    height: 100dvh;
+
+    padding: 8rem 0 0 0;
   }
 
   .containerSkills > div {
@@ -67,10 +68,7 @@
 
 @media screen and (max-width: 330px) {
   .containerSkills {
-    padding-top: 4rem;
-
-    margin-top: 17rem;
-    background-color: steelblue;
+    padding-top: 12rem;
   }
 
   .containerSkills > div {
@@ -83,11 +81,19 @@
 
 @media screen and (max-width: 190px) {
   .containerSkills {
-    padding-top: 4rem;
-    background-color: greenyellow;
-    margin-top: 10rem;
+    padding-top: 2rem;
+
+    margin-top: 4rem;
   }
   .containerSkills > .title {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .containerSkills {
+    margin-top: 3rem;
+
+    margin-bottom: 0;
   }
 }

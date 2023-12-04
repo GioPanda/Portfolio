@@ -6,14 +6,25 @@ import Presentation from "./Components/Presentation";
 import SideBar from "./Components/SideBar";
 
 import SkillsGallery from "./Components/SkillsGallery";
+import ProjectsGallery from "./Components/ProjectsGallery";
+import ContactsLinks from "./Components/ContactsLinks";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const handleResize = () => {
+    setIsMenuOpen(window.innerWidth < 760);
+  };
+
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 730px)").matches;
-    setIsMenuOpen(mediaQuery);
-    console.log(isMenuOpen);
-  }, [isMenuOpen]);
+    // Define o estado inicial
+    handleResize();
+    // Adiciona o listener
+    window.addEventListener("resize", handleResize);
+    // Limpa o listener quando o componente é desmontado
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -25,8 +36,9 @@ function App() {
         <div className="pages">
           <Presentation isOpen={isMenuOpen} />
           <OtherPage />
-
           <SkillsGallery />
+          <ProjectsGallery />
+          <ContactsLinks />
         </div>
       </div>
     </>

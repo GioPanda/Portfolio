@@ -4,7 +4,7 @@ const OtherPage = () => {
   return (
     <>
       <div className={`${styles.containerOtherPage} newSection`} id="About">
-        <h1 className={styles.title}>Sobre mim</h1>
+        <h1 className={`${styles.title} title`}>Sobre mim</h1>
 
         <div className={styles.wrapper}>
           <div className={styles.text}>

@@ -14,7 +14,7 @@ const SkillsGallery = () => {
   return (
     <>
       <section className={`${styles.containerSkills} newSection`} id="Skills">
-        <h1 className={styles.title}>Habilidades</h1>
+        <h1 className="title">Habilidades</h1>
         <div className={styles.firstDiv}>
           <SkillCard skill={<ReactImg />} skillName="React" />
 

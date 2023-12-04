@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Outfit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allerta&family=Lato:wght@300&family=Outfit:wght@600&display=swap");
 :root {
   --border-radius: 1px solid #64ffda;
   --green: #64ffda;
   --navy-shadow: rgba(2, 12, 27, 0.7);
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  --font-allerta: "Allerta", sans-serif;
+  --font-lato: "Lato", sans-serif;
   --linear-main-text: linear-gradient(
     to right,
     #4eb59d,

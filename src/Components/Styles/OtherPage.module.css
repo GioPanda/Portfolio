@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
 
-  height: 100vw;
+  height: 80%;
   min-height: 100%;
   min-width: 100%;
 
@@ -15,17 +15,11 @@
   justify-content: center;
   align-items: center;
 
+  position: relative;
   width: 100%;
-  height: 100%;
-}
+  height: 30rem;
 
-.containerOtherPage > .title {
-  text-align: center;
-  width: 100%;
-
-  font-family: var(--font-outfit);
-
-  margin-bottom: 3rem;
+  top: -5rem;
 }
 
 .containerOtherPage > .wrapper > .text {
@@ -48,8 +42,8 @@
   display: block;
   width: 100%;
   height: 1px;
-  margin-bottom: 1em;
-  background: rgb(116, 224, 238);
+  margin-bottom: 1rem;
+  background: rgba(116, 196, 220, 0.4);
 }
 
 .containerOtherPage > .wrapper > .text > p {
@@ -91,6 +85,10 @@
   .containerOtherPage > .wrapper > .photo > .image > img {
     margin-right: 1rem;
   }
+
+  .containerOtherPage > .wrapper {
+    top: 0;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -105,13 +103,19 @@
     text-align: center;
   }
 
+  .containerOtherPage {
+    padding-bottom: 4rem;
+  }
   .containerOtherPage > .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     width: 100%;
-    height: 80%;
+
+    padding-bottom: 4rem;
+
+    top: 2rem;
   }
 
   .containerOtherPage > .wrapper > .text {
@@ -146,6 +150,8 @@
     align-items: center;
 
     width: 100%;
+
+    padding-bottom: 4rem;
   }
 
   .containerOtherPage > .wrapper > .photo {
@@ -169,7 +175,7 @@
   }
 
   .containerOtherPage > .title {
-    margin-bottom: 0;
+    margin-bottom: 3rem;
   }
 }
 
@@ -215,20 +221,34 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  .containerOtherPage > .wrapper > .photo {
+    margin: 2rem 0 0 0;
+
+    height: 5rem;
+    width: 100%;
+  }
+
+  .containerOtherPage {
+    margin-bottom: 5rem;
+  }
+}
+
 @media screen and (max-width: 365px) {
   .containerOtherPage > .wrapper > .photo {
-    margin: 0;
+    margin: 2rem 0 0 0;
 
     height: 5rem;
     width: 100%;
   }
 
   .containerOtherPage > .wrapper > .photo > .image > img {
-    display: flex;
-    margin: 2rem 0 2rem 0;
-
     width: 7rem;
     height: 7rem;
+  }
+
+  .containerOtherPage {
+    margin-bottom: 10rem;
   }
 }
 

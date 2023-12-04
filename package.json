@@ -16,6 +16,7 @@
     "react-parallax-card": "^0.5.7",
     "react-router-dom": "6",
     "react-tilt": "^1.0.2",
+    "styled-components": "^6.1.1",
     "vite-plugin-svgr": "^4.1.0"
   },
   "devDependencies": {

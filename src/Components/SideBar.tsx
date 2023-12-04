@@ -22,7 +22,7 @@ const SideBar = () => {
             </a>
           </li>
           <li>
-            <a href="mailto:Qgjgk@example.com" target="_blank">
+            <a href="mailto:giovannasantosmrx@gmail.com" target="_blank">
               <MailIcon />
             </a>
           </li>

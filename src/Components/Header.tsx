@@ -22,9 +22,15 @@ const Header = ({ isOpen }: isMobileInterface) => {
             className={mobileStyles.humburguerIcon}
             onClick={toggleMobileMenu}
           >
-            <div className={mobileStyles.bar1}></div>
-            <div className={mobileStyles.bar2}></div>
-            <div className={mobileStyles.bar3}></div>
+            <div
+              className={` ${isMenuOpen ? mobileStyles.closeBar1 : ""}`}
+            ></div>
+            <div
+              className={` ${isMenuOpen ? mobileStyles.closeBar2 : ""}`}
+            ></div>
+            <div
+              className={` ${isMenuOpen ? mobileStyles.closeBar3 : ""}`}
+            ></div>
 
             {isMenuOpen && (
               <ul
@@ -41,10 +47,10 @@ const Header = ({ isOpen }: isMobileInterface) => {
                   <a href="#Skills">Habilidades</a>
                 </li>
                 <li>
-                  <a href="/">Projetos</a>
+                  <a href="/#Projetos">Projetos</a>
                 </li>
                 <li>
-                  <a href="/">Contato</a>
+                  <a href="/#Contact">Contato</a>
                 </li>
                 <li>
                   <a href="">Baixar Currículo</a>
@@ -89,10 +95,10 @@ const Header = ({ isOpen }: isMobileInterface) => {
                   <a href="#Skills">Habilidades</a>
                 </li>
                 <li>
-                  <a href="/">Projetos</a>
+                  <a href="/#Projetos">Projetos</a>
                 </li>
                 <li>
-                  <a href="/">Contato</a>
+                  <a href="/#Contact">Contato</a>
                 </li>
                 <li>
                   <a href="" className={styles.CvDownloader}>
