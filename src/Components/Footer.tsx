@@ -23,7 +23,7 @@ const FooterWrapper = styled.footer`
     margin-top: 10rem;
 
     padding-bottom: 4rem;
-    background-color: gainsboro;
+  
   }
 
   .site-footer {
