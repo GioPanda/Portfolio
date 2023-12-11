@@ -40,6 +40,9 @@ const SkillsGalleryWrapper = styled.div`
     margin: 20rem 0 6rem 0;
   }
 
+  @media screen and (min-width: 740px) {
+    margin-top: 4rem;
+  }
   @media screen and (max-width: 650px) {
     .gallery {
       display: grid;
@@ -70,14 +73,34 @@ const SkillsGalleryWrapper = styled.div`
       justify-items: center;
       align-items: center;
     }
-
-    .tilt {
-      margin-bottom: 2rem;
-    }
   }
 
   @media screen and (max-width: 720px) {
     margin-bottom: 6rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 8rem;
+    .gallery {
+      margin: 0 auto;
+      display: grid;
+      width: 100%;
+
+      height: 100%;
+
+      grid-template-columns: repeat(2, 1fr) !important;
+      grid-template-rows: repeat(4, 1fr) !important;
+
+      padding: 2rem 0;
+    }
+
+    .tilt svg {
+      width: 100%;
+      height: 100%;
+    }
+    .tilt div {
+      margin-bottom: 0.3rem;
+    }
   }
 
   @media screen and (max-width: 480px) {
@@ -144,14 +167,15 @@ const SkillsGalleryWrapper = styled.div`
   .tilt {
     display: flex;
     justify-content: center;
+    max-width: 100%;
   }
   .tilt > * {
-    background: radial-gradient(
+    /* background: radial-gradient(
       ellipse at center,
-      rgba(65, 184, 210, 0.2) 0%,
-      rgba(211, 240, 247, 0.2) 70%,
+      rgba(65, 184, 210, 0.1) 0%,
+      rgba(211, 240, 247, 1) 70%,
       rgba(211, 240, 247, 0) 100%
-    );
+    ); */
   }
 `;
 

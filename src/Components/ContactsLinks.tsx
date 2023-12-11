@@ -1,30 +1,28 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import styled from "styled-components";
-
-export { EachContactLinks };
 
 import LinkedinIcon from "../assets/colorized-linkedin.svg?react";
 import WhatsAppIcon from "../assets/whatsapp-icon.svg?react";
 import GmailIcon from "../assets/colorized-gmail-icon.svg?react";
 
+export { EachContactLinks };
+
 const StyledContactsLinks = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 0;
-  margin-top: 0;
-
-  background-color: green;
 
   gap: 1.4rem;
 
   width: 100%;
-  height: 100%;
+  min-height: 60%;
 
   max-height: 100%;
 
   border-radius: 0.2rem;
+  .title {
+    margin-top: 0;
+  }
 
   @media screen and (max-height: 700px) {
     margin: 0;
@@ -38,7 +36,6 @@ const StyledContactsLinks = styled.div`
 
   @media (max-width: 450px) {
     margin-top: 0;
-    margin-bottom: 10rem;
   }
 
   @media (max-width: 830px) {
@@ -129,6 +126,14 @@ const EachContactLinks = ({
     & a:hover > .linkName > strong {
       color: ${bgColor};
     }
+
+    @media (max-width: 400px) {
+      & > a > .linkName > strong {
+        color: black;
+        opacity: 0.7;
+        font-size: 0.8rem;
+      }
+    }
   `;
 
   return (
@@ -151,12 +156,16 @@ const ContactsLinks = () => {
     <StyledContactsLinks className="newSection" id="Contact">
       <h1 className="title">Contato</h1>
 
-      <EachContactLinks text="Linked In" link="sadasdada" bgColor="blue">
+      <EachContactLinks
+        text="Linked In"
+        link="https://www.linkedin.com/in/giovanna-santos-046443255/"
+        bgColor="blue"
+      >
         <LinkedinIcon />
       </EachContactLinks>
       <EachContactLinks
         text="11 99969-2388"
-        link="adadasdasdadadasdadasdsaad"
+        link="https://wa.me/5511999692388"
         bgColor="green"
       >
         <WhatsAppIcon />

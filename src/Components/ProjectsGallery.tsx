@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import Pic from "../assets/Projects/Captura de tela de 2023-11-17 11-26-19.png";
-import Pic2 from "../assets/Projects/Captura de tela de 2023-11-21 14-55-10.png";
+import Pic from "../assets/Projects/ComingSoon.png";
+import Pic2 from "../assets/Projects/ComingSoon.png";
 import ReactIcon from "../assets/Projects/React.png";
 import TsIcon from "../assets/Projects/Typescript.png";
 import JsIcon from "../assets/Projects/Javascript.png";
@@ -13,7 +13,7 @@ const ProjectsGallery = () => {
     {
       pic: Pic,
       projectName: "Nomes Brasileiros",
-      text: "lorem ipsum dolor sit amet, consectetur adipiscing adipiscing.",
+      text: "Pesquise sobre e saiba as estatísticas dos nomes brasileiros!",
       repoLink: "https://www.youtube.com",
       acessLink: "https://www.google.com",
       icons: [ReactIcon, JsIcon, TsIcon, GitIcon],
@@ -21,7 +21,7 @@ const ProjectsGallery = () => {
     {
       pic: Pic2,
       projectName: "Vagas Dev",
-      text: "lorem ipsum dolor sit amet, consectetur adipiscing adipiscing.",
+      text: "Plataforma de vagas para desenvolvedores!",
       repoLink: "https://www.youtube.com",
       acessLink: "https://www.google.com",
       icons: [ReactIcon, JsIcon, TsIcon, GitIcon],
@@ -30,7 +30,7 @@ const ProjectsGallery = () => {
     {
       pic: Pic2,
       projectName: "Streaming Downloader",
-      text: "lorem ipsum dolor sit amet, consectetur adipiscing adipiscing.",
+      text: "Baixe vídeos e áudios de plataformas de streaming!",
       repoLink: "https://www.youtube.com",
       acessLink: "https://www.google.com",
       icons: [ReactIcon, JsIcon, TsIcon, GitIcon],
@@ -38,7 +38,7 @@ const ProjectsGallery = () => {
     {
       pic: Pic,
       projectName: "My Translator",
-      text: "lorem ipsum dolor sit amet, consectetur adipiscing adipiscing.",
+      text: "O meu tradutor de idiomas!",
       repoLink: "https://www.youtube.com",
       acessLink: "https://www.google.com",
       icons: [ReactIcon, JsIcon, TsIcon, GitIcon],
@@ -72,13 +72,11 @@ const ProjectsGallery = () => {
     }, [windowWidth]);
 
     const ProjectsSection = styled.section`
-      display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 50%;
-      border: 3px solid;
 
-      margin-bottom: 15rem;
+      padding-bottom: 420px;
+
       #projects {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -88,6 +86,9 @@ const ProjectsGallery = () => {
 
         justify-items: center; /* Alinha os itens horizontalmente no centro */
         align-items: center;
+      }
+      @media (max-width: 1100px) {
+        padding-bottom: 50%;
       }
       @media (max-width: 880px) {
         #projects {
@@ -169,6 +170,20 @@ const ProjectsGallery = () => {
 
         align-items: center;
       }
+
+      @media screen and (max-width: 400px) {
+        .links {
+          margin-left: 1rem;
+        }
+
+        .information > span {
+          font-size: 0.9rem;
+        }
+
+        .information > h2 {
+          font-size: 1.2rem;
+        }
+      }
     `;
 
     interface IconsProps {
@@ -191,7 +206,7 @@ const ProjectsGallery = () => {
           margin-right: 0.7rem;
         }
 
-        @media (max-width: 390px) {
+        @media (max-width: 400px) {
           display: none;
         }
       `;
@@ -252,8 +267,8 @@ const ProjectsGallery = () => {
     };
     return (
       <>
-        <ProjectsSection className=" newSection" id="portfolio">
-          <h1 className="title">Meu Projetos</h1>
+        <ProjectsSection className=" newSection" id="Projects">
+          <h1 className="title">Meus Projetos</h1>
           <div id="projects">
             {visibleProjects.map((project, index) => (
               <div key={index} className="projectsWrapper">

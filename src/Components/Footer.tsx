@@ -2,14 +2,14 @@ import styled from "styled-components";
 import MailIcon from "../assets/Footer/mail.png";
 import WppIcon from "../assets/Footer/whatsapp.png";
 import LinkedinIcon from "../assets/Footer/linkedin.png";
+import Curriculo from "../assets/curriculo.pdf";
 
 const FooterWrapper = styled.footer`
   width: 100%;
   height: 100%;
 
+  z-index: 0;
   border-radius: 0.3rem;
-
-  padding-bottom: 4rem;
 
   @media screen and (max-height: 700px) {
     margin-top: 4rem;
@@ -21,6 +21,9 @@ const FooterWrapper = styled.footer`
 
   @media screen and (max-height: 400px) {
     margin-top: 10rem;
+
+    padding-bottom: 4rem;
+    background-color: gainsboro;
   }
 
   .site-footer {
@@ -31,9 +34,11 @@ const FooterWrapper = styled.footer`
   }
 
   .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+
+    margin-top: 2rem;
+
     background: radial-gradient(
       ellipse at center,
       rgba(211, 240, 247, 0.4) 0%,
@@ -54,6 +59,13 @@ const FooterWrapper = styled.footer`
   }
 
   .title {
+    .containerOtherPage > .wrapper > .photo {
+      margin: 2rem 0 2rem 0;
+
+      height: 5rem;
+      width: 100%;
+    }
+
     margin: 0;
   }
 
@@ -82,12 +94,17 @@ const FooterWrapper = styled.footer`
 
   /* Mobile responsiveness */
   @media screen and (max-width: 768px) {
+    padding-bottom: 25rem;
     .footer-columns {
       flex-direction: column;
     }
 
     .footer-column {
       flex-basis: 100%;
+    }
+
+    .footer-columns ul {
+      margin-bottom: 3rem;
     }
   }
   .footer-column {
@@ -159,7 +176,9 @@ const Footer = () => {
                   <a href="#Projects">Projetos</a>
                 </li>
                 <li>
-                  <a href="">Currículo</a>
+                  <a href={Curriculo} download>
+                    Currículo
+                  </a>
                 </li>
               </ul>
             </div>
@@ -184,13 +203,25 @@ const Footer = () => {
               <h3 className="title">Contato</h3>
 
               <div className="social-icons">
-                <a href="#" className="social-icon">
+                <a
+                  href="mailto:giovannasantosmrx@gmail.com"
+                  className="social-icon"
+                  target="_blank"
+                >
                   <img src={MailIcon} alt="" />
                 </a>
-                <a href="#" className="social-icon">
+                <a
+                  href="https://www.linkedin.com/in/giovanna-santos-046443255/"
+                  className="social-icon"
+                  target="_blank"
+                >
                   <img src={LinkedinIcon} alt="" />
                 </a>
-                <a href="#" className="social-icon">
+                <a
+                  href="https://wa.me/5511999692388"
+                  className="social-icon"
+                  target="_blank"
+                >
                   <img src={WppIcon} alt="11 999692388" />
                 </a>
               </div>

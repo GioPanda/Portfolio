@@ -23,7 +23,7 @@
 }
 
 .list > ul > li > a svg:hover {
-  fill: yellowgreen;
+  fill: rgba(116, 178, 164, 0.6);
   margin-bottom: 1rem;
   transition: 1s;
 

@@ -1,5 +1,5 @@
 import styles from "../Components/Styles/OtherPage.module.css";
-import AboutImage from "../assets/About-image.jpg";
+import AboutImage from "../assets/AboutMe.png";
 const OtherPage = () => {
   return (
     <>

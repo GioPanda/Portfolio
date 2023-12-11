@@ -25,28 +25,27 @@ html,
 body {
   height: 100%;
   margin: 0 auto;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   scroll-padding-top: auto;
   max-width: 2040px;
   scrollbar-width: auto; /* "auto" or "thin" */
 
   scrollbar-color: rgb(48, 36, 49) rgba(87, 244, 255, 0.1);
+
   background: linear-gradient(
     to bottom right,
-    rgba(211, 240, 247, 0.15),
-    rgba(226, 231, 231, 0.2) 40%,
-    rgb(206, 244, 244, 0.4)
-  );
+    rgba(88, 124, 133, 0.08),
+    rgba(222, 255, 255, 0.08) 40%,
+    rgba(199, 238, 238, 0.08) 60%,
+    rgba(82, 11, 190, 0.08)
+  ) !important;
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar-track {
   width: 12px; /* width of the entire scrollbar */
-}
 
-body::-webkit-scrollbar-track {
-  background: #64ffda rgba(87, 244, 255, 0.1); /* color of the tracking area */
+  scrollbar-color: rgb(48, 36, 49) rgba(87, 244, 255, 0.1);
 }
-
 .App {
   display: flex;
   flex-direction: column;

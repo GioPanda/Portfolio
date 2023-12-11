@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./Styles/Header.module.css";
 import mobileStyles from "./Styles/HeaderMobile.module.css";
 import ContactIcon from "../assets/contact-icon.svg?react";
+import Curriculo from "../assets/curriculo.pdf";
 
 export interface isMobileInterface {
   isOpen: boolean;
@@ -53,7 +54,9 @@ const Header = ({ isOpen }: isMobileInterface) => {
                   <a href="#Contact">Contato</a>
                 </li>
                 <li>
-                  <a href="">Baixar Currículo</a>
+                  <a href={Curriculo} download>
+                    Baixar Currículo
+                  </a>
                 </li>
               </ul>
             )}
@@ -101,7 +104,7 @@ const Header = ({ isOpen }: isMobileInterface) => {
                   <a href="#Contact">Contato</a>
                 </li>
                 <li>
-                  <a href="" className={styles.CvDownloader}>
+                  <a href={Curriculo} download className={styles.CvDownloader}>
                     Baixar Currículo
                   </a>
                 </li>
