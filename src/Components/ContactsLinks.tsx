@@ -20,8 +20,13 @@ const StyledContactsLinks = styled.div`
   max-height: 100%;
 
   border-radius: 0.2rem;
+
   .title {
     margin-top: 0;
+  }
+
+  @media screen and (min-width: 1100px) {
+    margin-top: 3rem;
   }
 
   @media screen and (max-height: 700px) {
