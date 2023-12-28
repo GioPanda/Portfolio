@@ -14,7 +14,7 @@ const Presentation = ({ isOpen }: isMobileInterface) => {
             <span className={styles.selectedText}>Front-End!</span>
           </h1>
           <p>
-            Me chamo Giovanna Santos, 19 anos, sou uma desenvolvedora Front-End
+            Me chamo Giovanna Santos, 20 anos, sou uma desenvolvedora Front-End
             com foco em ReactJs. {isOpen ? "" : <br />} Saiba mais sobre mim
           </p>
           <div className={styles.links}>
