@@ -15,7 +15,7 @@ const SideBar = () => {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/giovannasantos/"
+              href="https://www.linkedin.com/in/giovanna-santos-046443255/"
               target="_blank"
             >
               <LinkedinIncon />
