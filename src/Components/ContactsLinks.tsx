@@ -30,6 +30,9 @@ const StyledContactsLinks = styled.div`
       margin-top: 4rem;
     }
   }
+  @media (min-width: 950px) {
+    margin-top: 12rem !important;
+  }
 
   @media screen and (max-height: 700px) {
     margin: 0;

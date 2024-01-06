@@ -39,6 +39,8 @@ body {
     rgba(199, 238, 238, 0.08) 60%,
     rgba(82, 11, 190, 0.08)
   ) !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
 }
 
 *::-webkit-scrollbar-track {

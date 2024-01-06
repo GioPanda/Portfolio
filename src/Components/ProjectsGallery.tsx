@@ -2,52 +2,55 @@ import styled from "styled-components";
 
 import Pic from "../assets/Projects/ComingSoon.png";
 import Pic2 from "../assets/Projects/ComingSoon.png";
+import KanbanImg from "../assets/Projects/KanBan.png";
+import NomesBrasileirosImg from "../assets/Projects/Nomes Brasileiros.png";
 import ReactIcon from "../assets/Projects/React.png";
 import TsIcon from "../assets/Projects/Typescript.png";
 import JsIcon from "../assets/Projects/Javascript.png";
 import GitIcon from "../assets/Projects/Git.png";
+import TailwindIcon from "../assets/Projects/tailwind-css-icon.png";
 import { ReactNode, useEffect, useState } from "react";
 
 const ProjectsGallery = () => {
   const projects = [
     {
-      pic: Pic,
+      pic: NomesBrasileirosImg,
       projectName: "Nomes Brasileiros",
       text: "Pesquise sobre e saiba as estatísticas dos nomes brasileiros!",
-      repoLink: "https://www.youtube.com",
-      acessLink: "https://www.google.com",
-      icons: [ReactIcon, JsIcon, TsIcon, GitIcon],
+      repoLink: "https://github.com/GioPanda/NomesBrasileiros",
+      acessLink: "https://portfolio-giovanna-santos.vercel.app/#Projects",
+      icons: [ReactIcon, JsIcon, TsIcon, TailwindIcon],
     },
     {
-      pic: Pic2,
-      projectName: "Vagas Dev",
-      text: "Plataforma de vagas para desenvolvedores!",
-      repoLink: "https://www.youtube.com",
-      acessLink: "https://www.google.com",
-      icons: [ReactIcon, JsIcon, TsIcon, GitIcon],
+      pic: KanbanImg,
+      projectName: "Drang and Drop Kanban",
+      text: "Plataforma para organizar suas tarefas de forma dinâmica!",
+      repoLink: "https://github.com/GioPanda/DragAndDrop-Kanban",
+      acessLink: "https://drag-and-drop-kanban-brown.vercel.app/",
+      icons: [ReactIcon, JsIcon, TsIcon, TailwindIcon],
     },
 
     {
       pic: Pic2,
       projectName: "Streaming Downloader",
       text: "Baixe vídeos e áudios de plataformas de streaming!",
-      repoLink: "https://www.youtube.com",
-      acessLink: "https://www.google.com",
+      repoLink: "https://github.com/GioPanda/",
+      acessLink: "https://portfolio-giovanna-santos.vercel.app/#Projects",
       icons: [ReactIcon, JsIcon, TsIcon, GitIcon],
     },
     {
       pic: Pic,
       projectName: "My Translator",
       text: "O meu tradutor de idiomas!",
-      repoLink: "https://www.youtube.com",
-      acessLink: "https://www.google.com",
+      repoLink: "https://github.com/GioPanda/",
+      acessLink: "https://portfolio-giovanna-santos.vercel.app/#Projects",
       icons: [ReactIcon, JsIcon, TsIcon, GitIcon],
     },
     // {
     //   pic: Pic,
     //   projectName: "My Translator",
     //   text: "lorem ipsum dolor sit amet, consectetur adipiscing adipiscing.",
-    //   repoLink: "https://www.youtube.com",
+    //   repoLink: "https://github.com/GioPanda/",
     //   acessLink: "https://www.google.com",
     //   icons: [ReactIcon, JsIcon, TsIcon, GitIcon],
     // },
@@ -68,7 +71,7 @@ const ProjectsGallery = () => {
     }, []);
 
     useEffect(() => {
-      setVisibleProjects(windowWidth <= 890 ? projects.slice(0, 2) : projects);
+      setVisibleProjects(windowWidth <= 1100 ? projects.slice(0, 2) : projects);
     }, [windowWidth]);
 
     const ProjectsSection = styled.section`
@@ -87,16 +90,25 @@ const ProjectsGallery = () => {
         justify-items: center; /* Alinha os itens horizontalmente no centro */
         align-items: center;
       }
-      @media (max-width: 1100px) {
-        padding-bottom: 50%;
+
+      @media (min-width: 1100px) {
+        .projectsWrapper {
+          min-width: 300px;
+          width: 500px;
+          max-width: 500px;
+        }
       }
-      @media (max-width: 880px) {
+
+      @media (max-width: 1100px) {
         #projects {
           display: flex;
           flex-direction: column;
           min-width: 100vw;
+          padding-bottom: 50%;
         }
+      }
 
+      @media (max-width: 880px) {
         .projectsWrapper {
           min-width: 80vw;
         }
@@ -108,6 +120,9 @@ const ProjectsGallery = () => {
       }
 
       @media (max-width: 630px) {
+        .projectsWrapper {
+          max-width: 50%;
+        }
         #images img {
           width: 100%;
           max-height: 15rem;
@@ -118,7 +133,7 @@ const ProjectsGallery = () => {
         margin-top: 0%;
       }
       .projectsWrapper {
-        width: 40vw;
+        width: 550px;
 
         display: flex;
         flex-direction: column;
@@ -134,7 +149,7 @@ const ProjectsGallery = () => {
         width: 100%;
         height: 20rem;
 
-        object-fit: fill;
+        object-fit: cover;
 
         border-radius: 8px;
       }
@@ -282,7 +297,7 @@ const ProjectsGallery = () => {
 
                 <div className="links">
                   <TecnologiesIcons icons={project.icons} />
-                  <ProjectButtons link={project.acessLink}>
+                  <ProjectButtons link={project.repoLink}>
                     Repositório
                   </ProjectButtons>
 
