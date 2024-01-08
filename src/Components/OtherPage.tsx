@@ -9,7 +9,7 @@ const OtherPage = () => {
         <div className={styles.wrapper}>
           <div className={styles.text}>
             <p>
-   Me chamo Giovanna Santos. Sou uma desenvolvedora front-end apaixonada pela criação de experiências web excepcionais. Minha jornada na programação começou aos 12 anos, explorando inicialmente o mundo do PHP. Em 2022, decidi retomar minha jornada, mas desta vez com foco em JavaScript/TypeScript e React.
+   Me chamo Giovanna Santos, sou uma desenvolvedora front-end apaixonada pela criação de experiências web excepcionais. Minha jornada na programação começou aos 12 anos, explorando inicialmente o mundo do PHP. Em 2022, decidi retomar minha jornada, mas desta vez com foco em JavaScript/TypeScript e React.
 
             </p>
             <p>
